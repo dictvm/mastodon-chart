@@ -176,14 +176,14 @@ mastodon:
     livenessProbe:
       tcpSocket:
         port: streaming
-      failureThreshold: 30
-      periodSeconds: 5
+      failureThreshold: 3
+      periodSeconds: 10
     readinessProbe:
       httpGet:
         path: /api/v1/streaming/health
         port: streaming
-      failureThreshold: 30
-      periodSeconds: 5
+      failureThreshold: 3
+      periodSeconds: 10
     startupProbe:
       httpGet:
         path: /api/v1/streaming/health
@@ -215,14 +215,14 @@ mastodon:
     livenessProbe:
       tcpSocket:
         port: http
-      failureThreshold: 30
-      periodSeconds: 5
+      failureThreshold: 3
+      periodSeconds: 10
     readinessProbe:
       httpGet:
         path: /health
         port: http
-      failureThreshold: 30
-      periodSeconds: 5
+      failureThreshold: 3
+      periodSeconds: 10
     startupProbe:
       httpGet:
         path: /health
